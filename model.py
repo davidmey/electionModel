@@ -134,8 +134,8 @@ if '-p' in sys.argv:
 
     # calculate who is favored to win
     if results_tallies[0] + results_tallies[2] > results_tallies[1]:
-        title = "Biden Wins in " + str(results_tallies[0]) + " of " + str(
-            reps) + " Simulations (" + str(round(100 * results_tallies[0] / reps, 2)) + "%)\n"
+        title = "Biden Wins in " + str(results_tallies[0] + results_tallies[2]) + " of " + str(
+            reps) + " Simulations (" + str(round(100 * (results_tallies[0] + results_tallies[2])/ reps, 2)) + "%)\n"
     elif results_tallies[0] + results_tallies[2] == results_tallies[1]:
         title = "Biden and Trump Each Win " + \
             str(reps / 2) + " Simulations (50%)\n"
