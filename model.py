@@ -137,14 +137,14 @@ if '-p' in sys.argv:
         title = "Biden Wins in " + str(results_tallies[0]) + " of " + str(
             reps) + " Simulations (" + str(round(100 * results_tallies[0] / reps, 2)) + "%)\n"
     elif results_tallies[0] + results_tallies[2] == results_tallies[1]:
-        title = "Trump Wins in " + str(results_tallies[1]) + " of " + str(
-            reps) + " Simulations (" + str(round(100 * results_tallies[1] / reps, 2)) + "%)\n"
-    else:
         title = "Biden and Trump Each Win " + \
             str(reps / 2) + " Simulations (50%)\n"
+    else:
+        title = "Trump Wins in " + str(results_tallies[1]) + " of " + str(
+            reps) + " Simulations (" + str(round(100 * results_tallies[1] / reps, 2)) + "%)\n"
     title += "Expected Electoral College Results: " + \
         str(round(biden_votes, 2)) + " to " + str(round(trump_votes, 2))
-
+    
     # Use this handy dandy code I only slightly modified to plot chart
     ATOLL_CUTOFF = 0.005
     m = Basemap(llcrnrlon=-121, llcrnrlat=20, urcrnrlon=-62, urcrnrlat=51,
